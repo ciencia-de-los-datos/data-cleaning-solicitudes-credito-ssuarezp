@@ -6,13 +6,11 @@ Realice la limpieza del dataframe. Los tests evaluan si la limpieza fue realizad
 correctamente. Tenga en cuenta datos faltantes y duplicados.
 
 """
-from datetime import datetime
 import pandas as pd
-import re
 
 
 def clean_data():
-    df = pd.read_csv("solicitudes_credito.csv", sep=";", index_col=0)
+    df = pd.read_csv("solicitudes_credito.csv", sep=";")
     
     #Renombrar columna
     df.rename(columns={'Unnamed: 0':'index'},inplace=True)
@@ -33,4 +31,5 @@ def clean_data():
     #Eliminación de nulos y duplicados
     df.dropna(inplace=True)
     df.drop_duplicates(inplace=True)
+    
     return df
