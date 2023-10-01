@@ -11,14 +11,9 @@ import pandas as pd
 import re
 
 
-
 def clean_data():
-
     df = pd.read_csv("solicitudes_credito.csv", sep=";", index_col=0)
-
-    #
-    # Inserte su código aquí
-    #
+    
     #Eliminar datos duplicados y faltantes
     df.dropna(inplace=True)
     df.sexo = df.sexo.str.lower()
