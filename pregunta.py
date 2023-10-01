@@ -7,7 +7,7 @@ correctamente. Tenga en cuenta datos faltantes y duplicados.
 
 """
 import pandas as pd
-
+import csv
 
 def clean_data():
 
